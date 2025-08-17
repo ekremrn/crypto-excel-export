@@ -62,8 +62,8 @@ class BinanceReadService:
     """Enhanced Binance API service for fetching and exporting historical data."""
     
     def __init__(self, testnet: bool = False) -> None:
-        self.api_key = os.getenv("BINANCE_API_KEY", "")
-        self.api_secret = os.getenv("BINANCE_API_SECRET", "")
+        self.api_key = os.getenv("BINANCE_API_KEY")
+        self.api_secret = os.getenv("BINANCE_API_SECRET")
         self.testnet = testnet or os.getenv("BINANCE_TESTNET", "").lower() == "true"
         
         try:

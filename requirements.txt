@@ -3,3 +3,4 @@ openpyxl==3.1.5
 xlsxwriter==3.2.5
 python-binance==1.0.29
 requests==2.32.4
+streamlit==1.37.0
