@@ -1,15 +1,17 @@
-# 📊 Crypto Data Exporter
+# 📊 KuCoin Crypto Data Exporter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-excel-export.streamlit.app/)
 
-A simple web app built with [Streamlit](https://streamlit.io/) to download historical cryptocurrency k-line data from [Binance](https://www.binance.com/) and export it to a formatted Excel file.
+A simple web app built with [Streamlit](https://streamlit.io/) to download historical cryptocurrency k-line (candlestick) data from [KuCoin](https://www.kucoin.com/) and export it to a formatted Excel file.
 
 ## ✨ Features
 
-- **Easy-to-use UI** to select a trading pair, time interval, and start date.
-- **Fetches historical data** for any symbol available on Binance.
+- **KuCoin-Specific Data Fetching**: Designed to work seamlessly with the KuCoin API.
+- **Date Range Selection**: Easily specify start and end dates to fetch historical data for any period.
+- **Progress Bar**: Visual feedback during data download, especially useful for large date ranges.
 - **Exports to Excel**: Downloads data into a well-formatted `.xlsx` file.
-- **Data Preview**: Displays the first 10 rows and basic stats before downloading.
+- **Easy-to-use UI**: Intuitive interface to select trading pair, time interval, and date range.
 
 ## 🚀 Quickstart
 
@@ -36,10 +38,10 @@ Navigate to `http://localhost:8501` in your browser.
 
 ### 3. Configuration (Optional)
 
-This app works with public data and does not require API keys. However, you can add your own Binance keys for higher request limits.
+This app can fetch public K-line data without API keys. However, providing your KuCoin API Key, Secret, and Passphrase will allow for higher rate limits and access to private endpoints if you extend the application.
 
 1.  Copy `.env.example` to a new file named `.env`.
-2.  Add your `BINANCE_API_KEY` and `BINANCE_API_SECRET` to the `.env` file.
+2.  Add your `KUCOIN_API_KEY`, `KUCOIN_API_SECRET`, and `KUCOIN_API_PASSPHRASE` to the `.env` file.
 
 ## 📝 License
 
